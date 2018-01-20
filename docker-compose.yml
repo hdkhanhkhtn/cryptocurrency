@@ -20,8 +20,9 @@ services:
       - "80:80"
     volumes:
       - /workspace/src/static/
+      - ./nginx/log:/var/log/
     volumes_from:
-      - web
+      - web:rw
     links:
       - web:web
     depends_on:
