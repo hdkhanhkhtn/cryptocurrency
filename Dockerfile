@@ -1,7 +1,8 @@
 FROM python:latest
 ENV PYTHONUNBUFFERED 1
-RUN mkdir /webapp
-WORKDIR /webapp
-ADD webapp/requirements.txt /webapp/
+RUN mkdir /workspace
+RUN mkdir /workspace/src
+WORKDIR /workspace/src
+ADD ./webapp/requirements.txt /workspace/src
 RUN pip install -r requirements.txt
 
