@@ -19,7 +19,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - /www/static/
+      - /workspace/src/static/
     volumes_from:
       - web
     links:
@@ -33,7 +33,7 @@ services:
       - "8000"
     env_file:
       - .env
-    command: uwsgi --http :8000 --module mysite.wsgi
+    command: uwsgi --ini uwsgi.ini
     volumes:
       - ./webapp:/workspace
     depends_on:
