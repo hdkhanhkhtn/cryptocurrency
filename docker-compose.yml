@@ -34,7 +34,7 @@ services:
       - "8000"
     env_file:
       - .env
-    command: uwsgi --ini uwsgi.ini
+    command: uwsgi -t 3000 --ini uwsgi.ini
     volumes:
       - ./webapp:/workspace
     depends_on:
