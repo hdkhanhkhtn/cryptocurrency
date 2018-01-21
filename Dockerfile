@@ -6,6 +6,6 @@ RUN mkdir /workspace/src
 WORKDIR /workspace/src
 ADD ./webapp/requirements.txt /workspace/src
 RUN pip install -r requirements.txt
-RUN python manage.py migrate
-RUN python manage.py collectstatic --noinput --clear
+# RUN python manage.py migrate
+# RUN python manage.py collectstatic --noinput --clear
 
