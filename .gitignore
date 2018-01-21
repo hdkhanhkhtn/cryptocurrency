@@ -67,5 +67,5 @@ target/
 #Ipython Notebook
 .ipynb_checkpoints
 
-media_cdn/
-static_cdn/
+webapp/media_cdn/
+webapp/static_cdn/
